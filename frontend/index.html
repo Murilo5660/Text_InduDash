@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InduDash | Monitoramento Industrial</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>🏭 InduDash</h1>
+        <p>Monitoramento Industrial em Tempo Real</p>
+    </header>
+
+    <!-- KPIs -->
+    <section class="kpis">
+
+        <div class="card">
+            <h3>Máquinas Ativas</h3>
+            <span id="ativas">--</span>
+        </div>
+
+        <div class="card">
+            <h3>Em Alerta</h3>
+            <span id="alerta">--</span>
+        </div>
+
+        <div class="card">
+            <h3>Manutenção</h3>
+            <span id="manutencao">--</span>
+        </div>
+
+        <div class="card">
+            <h3>Paradas</h3>
+            <span id="paradas">--</span>
+        </div>
+
+        <div class="card">
+            <h3>Produção/Hora</h3>
+            <span id="producaoTotal">--</span>
+        </div>
+
+        <div class="card">
+            <h3>Energia</h3>
+            <span id="energiaTotal">--</span>
+        </div>
+
+        <div class="card">
+            <h3>OEE Médio</h3>
+            <span id="oeeMedio">--</span>
+        </div>
+
+        <div class="card">
+            <h3>Eficiência</h3>
+            <span id="eficienciaMedia">--</span>
+        </div>
+
+    </section>
+
+    <!-- Gráficos -->
+    <section class="graficos">
+
+        <div class="grafico-card">
+            <h2>Produção por Hora</h2>
+            <canvas id="producaoChart"></canvas>
+        </div>
+
+        <div class="grafico-card">
+            <h2>Consumo de Energia</h2>
+            <canvas id="energiaChart"></canvas>
+        </div>
+
+        <div class="grafico-card">
+            <h2>Status das Máquinas</h2>
+            <canvas id="statusChart"></canvas>
+        </div>
+
+        <div class="grafico-card">
+            <h2>OEE por Máquina</h2>
+            <canvas id="oeeChart"></canvas>
+        </div>
+
+    </section>
+
+    <!-- Tabela -->
+    <section class="tabela-container">
+
+        <h2>Alertas de Manutenção</h2>
+
+        <table>
+
+            <thead>
+                <tr>
+                    <th>Máquina</th>
+                    <th>Tipo</th>
+                    <th>Prioridade</th>
+                </tr>
+            </thead>
+
+            <tbody id="tabela-alertas"></tbody>
+
+        </table>
+
+    </section>
+
+    <script src="kpis.js"></script>
+    <script src="chart1.js"></script>
+    <script src="chart2.js"></script>
+    <script src="chart3.js"></script>
+    <script src="chart4.js"></script>
+    <script src="tabela.js"></script>
+
+<footer>
+    <p>
+        © 2026 <strong>InduDash</strong> • Desenvolvido por
+        <strong>Murilo Ferreira Stresser</strong> e
+        <strong>Caio Lima Viana</strong>
+    </p>
+</footer>
+
+</body>
+
+</html>
